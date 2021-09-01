@@ -1,6 +1,7 @@
 package com.intheworldofdeep;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class GameFrame extends JFrame {
     GameFrame(){

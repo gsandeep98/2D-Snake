@@ -28,11 +28,20 @@ public class GamePanel extends JPanel implements ActionListener {
 
     //HOW MANY BODY PARTS DO WE NEED IN A SNAKE
     int bodyParts = 6;
-
-
-
+    int applesEaten;
+    int appleX;
+    int appleY;
+    char direction = 'R';
+    boolean running = false;
+    Timer timer;
+    Random random;
 
     GamePanel() {
+        this.setPreferredSize(new Dimension(SCREEN_WIDTH,SCREEN_HEIGHT));
+        this.setBackground(Color.PINK);
+        this.setFocusable(true);
+        this.addKeyListener(new myKeyAdapter());
+        startGame();
 
     }
 
@@ -48,6 +57,9 @@ public class GamePanel extends JPanel implements ActionListener {
 
     }
 
+    public void newApple(){
+
+    }
     public void move(){
 
     }
@@ -63,16 +75,25 @@ public class GamePanel extends JPanel implements ActionListener {
     public void gameOver (Graphics g){
     }
 
-    public void MyKeyAdapter extends KeyAdapter{
-        @Override
-                public void keyPressed (KeyEvent e){
-
-        }
+    public void myKeyAdapter(){
     }
-
 
     @Override
     public void actionPerformed(ActionEvent e) {
 
     }
+
+    private class myKeyAdapter extends KeyAdapter {
+        @Override
+        public void keyPressed(KeyEvent e){
+
+        }
+    }
+
+//    public void MyKeyAdapter extends KeyAdapter{
+//        @Override
+//        public void keyPressed(KeyEvent e){
+//
+//        }
+//    }
 }
